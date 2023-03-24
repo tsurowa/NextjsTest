@@ -1,10 +1,39 @@
 import { Hero } from "../sections";
+import { Main } from '../sections/Main/Main';
 
 const heroProps = {
   image: { src: "/img/heroimg.png", alt: "", width: 1000, height: 1680 },
   title: "Agency procurement, outsourced.",
   description: "Start the process here",
   ctaText: "Start",
+};
+
+const agencyProps = {
+  image: { src: "/img/video.png", alt: "", width: 400, height: 500 },
+  data: [
+    {
+      id: 1,
+      image: { src: "/img/next1.png", alt: "", width: 150, height: 150 },
+      title: "Brief",
+      description:
+        "Complete brief writing or simple guidance on what to include, we've got you covered",
+    },
+    {
+      id: 2,
+      image: { src: "/img/next2.png", alt: "", width: 150, height: 150 },
+      title: "Search",
+      description:
+        "In depth agency search covering; criteria matching, door knocking and due-dilligence vetting",
+    },
+    {
+      id: 3,
+      image: { src: "/img/next3.png", alt: "", width: 150, height: 150 },
+      title: "Pitch",
+      description:
+        "Comprehensive pitch management including comms, diary managment and pitch hosting",
+      underline: "true",
+    },
+  ],
 };
 
 export default function Home() {
@@ -21,6 +50,7 @@ export default function Home() {
       <div>
         <Hero {...heroProps} />
         {/** Other sections */}
+        <Main {...agencyProps} />
       </div>
     </>
   );

@@ -1,13 +1,21 @@
-import { Card } from "../Card";
+import Image from "next/image";
+import { Container, Left, Paragraph, Right, Title } from "./elements";
 
-import { StyledCardsContainer } from "./elements";
-
-export const Cards = (props) => {
+export const Info = ({ image, title, description, underline }) => {
   return (
-    <StyledCardsContainer>
-      {props.cardsData.map((card, index) => (
-        <Card key={index} {...card} position={index} />
-      ))}
-    </StyledCardsContainer>
+    <Container>
+      <Left>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+        />
+      </Left>
+      <Right>
+        <Title underline={underline}>{title}</Title>
+        <Paragraph>{description}</Paragraph>
+      </Right>
+    </Container>
   );
 };
