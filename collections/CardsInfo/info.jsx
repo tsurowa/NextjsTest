@@ -12,7 +12,8 @@ export const Info = ({ image, title, description, underline }) => {
           height={image.height}
         />
       </Left>
-      <Right>
+      <Right
+        style={{margin:"0px 0px 0px 10px"}}>
         <Title underline={underline}>{title}</Title>
         <Paragraph>{description}</Paragraph>
       </Right>
